@@ -11,8 +11,8 @@ It is a collection of functions for Multiplicty Correction and Multiple Testing.
 \tabular{ll}{
 Package: \tab someMTP\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2010-07-06\cr
+Version: \tab 1.1\cr
+Date: \tab 2010-12-15\cr
 License: \tab GPL (>= 2) \cr
 LazyLoad: \tab yes\cr
 }
@@ -34,10 +34,10 @@ Finos,  Salmaso (2007). FDR- and FWE-controlling methods using data-driven weigh
 
 For LSD test:
 
-J. L\"auter, E. Glimm and S. Kropf (1998). Multivariate test based on Left-Spherically Distributed Linear Scores. 
+J. Lauter, E. Glimm and S. Kropf (1998). Multivariate test based on Left-Spherically Distributed Linear Scores. 
 The Annals of Statistics, Vol. 26, No. 5, 1972-1988
 
-Finos (2010). A note on Left-Spherically Distributed Test with covariates. University of Padua, Dept Statistical Science. Working Paper #8
+Finos (2010). A note on Left-Spherically Distributed Test with covariates. University of Padua, Dept Statistical Science. Working Paper #8 (submitted)
 }
 \keyword{ package }
 %\seealso{ \code{\link[someKfwer:kfwe-package.Rd]{someKfwer}} }

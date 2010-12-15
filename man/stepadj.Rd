@@ -22,13 +22,13 @@ step.adj(object, MC = 1000, scope = NULL, scale = 0, direction = c("both", "back
   \item{MC}{
 number of random permutations for the dependent variable
 }
-  \item{scope}{,}
-  \item{scale}{,}
-  \item{direction}{,}
-  \item{trace}{,}
-  \item{keep}{,}
-  \item{steps}{,}
-  \item{k}{see the help of funtion \code{step}, other arguments are not implemented yet.}
+  \item{scope}{as in function \code{step}}
+  \item{scale}{as in function \code{step}}
+  \item{direction}{as in function \code{step}}
+  \item{trace}{as in function \code{step}}
+  \item{keep}{as in function \code{step}}
+  \item{steps}{as in function \code{step}}
+  \item{k}{as in function \code{step}, other arguments are not implemented yet.}
 }
 
 

@@ -9,7 +9,7 @@ It performs the multivariate Left Spherically Distributed linear scores test of 
 }
 
 \usage{
-lsd.test(resp, alternative = rep(1, dim(as.matrix(resp))[2]), null = NULL, D = function(resp) t(as.matrix(diag(t(resp) \%*\% resp))))
+lsd.test(resp, alternative = 1, null = NULL, D = NULL)
 }
 
 \arguments{
@@ -23,25 +23,29 @@ lsd.test(resp, alternative = rep(1, dim(as.matrix(resp))[2]), null = NULL, D = f
   is the n x h matrix of predictors not to be tested (i.e. covariates) 
   }
   \item{D}{
-  is a function with argument \code{resp} prducing the q x p transformation matrix or is the trasformation matrix itself.
-}
+  is q x p matrix or it is a function with arguments \code{resp} and \code{null}
+  returning the q x p transformation matrix.
+  when \code{D = NULL}, then \\ \code{D =  diag(t(resp)\%*\%IP0\%*\%resp)} with \code{IP0 = diag(n) - null\%*\%solve(t(null)\%*\%null)\%*\%t(null)}
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-  \item{F }{is the F statistic}
-  \item{p }{is the associated p-value}
+  \item{F }{the test statistic}
+  \item{df }{the degrees of freedom of F}
+  \item{p }{the associated p-value}
+  \item{D }{the matrix used in the test (it provide information on the influence of columns in \code{resp} to the test)}
 }
 \references{
 
-J. L\"auter, E. Glimm and S. Kropf (1998) Multivariate test based on Left-Spherically Distributed Linear Scores. 
+J. Lauter, E. Glimm and S. Kropf (1998) Multivariate test based on Left-Spherically Distributed Linear Scores. 
 The Annals of Statistics, Vol. 26, No. 5, 1972-1988
 
 Finos (2010) A note on Left-Spherically Distributed Test with covariates. University of Padua, Dept Statistical Science. Working Paper #8
 }
 \author{
-Livio Finos and Dario Basso
+Livio Finos
 }
 \note{
 %%  ~~further notes~~
@@ -64,5 +68,6 @@ lsd.test(resp=X2,null=rep(1,5),alternative=c(0,0,1,1,1))
 
 #General multivariate LSD test for linear predictor with covariates
 lsd.test(resp=X2,null=cbind(rep(1,5),c(0,0,1,1,1)),alternative=1:5)
+
 }
 \keyword{htest}
