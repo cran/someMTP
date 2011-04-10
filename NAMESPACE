@@ -1,1 +1,7 @@
 exportPattern("^[[:alpha:]]+")
+
+exportClasses(someMTP.object, lsd.object)
+
+exportMethods(show, length, names, "names<-", sort)
+
+export(lsd.test,fdrOrd, p.adjust.w, draw)

@@ -1,0 +1,59 @@
+\name{draw}
+\alias{draw}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+Plots results of fdrOrd()
+}
+\description{
+Plots results of fdrOrd()
+
+}
+\usage{
+draw(object, what = c("all", "ordVsP", "stepVsR"), pdfName = NULL)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{object}{ a \code{someMTP.object} resulting from fdrOrd()
+}
+  \item{what}{
+  what to plot; \code{"all"} is the default
+}
+  \item{pdfName}{ it is the pdf filename where the plot will be saved. If \code{pdfNane} is null (the default) the plot will show as window.
+}
+}
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+No value is returned
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{
+Livio Finos
+}
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+See Also \code{\link{fdrOrd}}.
+}
+\examples{
+set.seed(17)
+	x=matrix(rnorm(60),3,20)
+	x[,1:10]=x[,1:10]+2 ##variables 1:10 have tests under H1
+	ts=apply(x,2,function(x) t.test(x)$statistic)
+	ps=apply(x,2,function(x) t.test(x)$p.value)
+	m2=apply(x^2,2,mean)
+	pOrd <- fdrOrd(ps,q=.05,ord=m2)	
+	draw(pOrd)
+}
+
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

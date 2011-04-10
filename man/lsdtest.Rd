@@ -1,5 +1,6 @@
 \name{lsd.test}
 \alias{lsd.test}
+\alias{lsd}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{ 
 Multivariate Left Spherically Distributed (LSD) linear scores test.
@@ -25,25 +26,30 @@ lsd.test(resp, alternative = 1, null = NULL, D = NULL)
   \item{D}{
   is q x p matrix or it is a function with arguments \code{resp} and \code{null}
   returning the q x p transformation matrix.
-  when \code{D = NULL}, then \\ \code{D =  diag(t(resp)\%*\%IP0\%*\%resp)} with \code{IP0 = diag(n) - null\%*\%solve(t(null)\%*\%null)\%*\%t(null)}
+  When \code{D = NULL}, then  \code{D =  diag(t(resp)\%*\%IP0\%*\%resp)} with \code{IP0 = diag(n) - null\%*\%solve(t(null)\%*\%null)\%*\%t(null)}
   }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
-\value{
+
+\value{The function returns an object of class \code{lsd.object}.
   \item{F }{the test statistic}
   \item{df }{the degrees of freedom of F}
   \item{p }{the associated p-value}
   \item{D }{the matrix used in the test (it provide information on the influence of columns in \code{resp} to the test)}
+  \item{\code{call}:}{The matched call to \code{\link{lsd.test}}.}
 }
+
 \references{
 
-J. Lauter, E. Glimm and S. Kropf (1998) Multivariate test based on Left-Spherically Distributed Linear Scores. 
+J. Laeuter, E. Glimm and S. Kropf (1998) Multivariate test based on Left-Spherically Distributed Linear Scores. 
 The Annals of Statistics, Vol. 26, No. 5, 1972-1988
 
-Finos (2010) A note on Left-Spherically Distributed Test with covariates. University of Padua, Dept Statistical Science. Working Paper #8
+L. Finos (2011). A note on Left-Spherically Distributed Test with
+covariates, Statistics and Probabilty Letters, Volume 81, Issue 6, June 2011, Pages 639-641 
 }
+
 \author{
 Livio Finos
 }
