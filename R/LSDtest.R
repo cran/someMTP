@@ -39,6 +39,7 @@ lsd.test <- function (resp, alternative = 1, null = NULL, D = NULL){
   out @ F = out@df[2]/out@df[1]*sum(diag(DHD))/sum(diag(DGD))
   out @ globalP = 1-pf(F,out@df[1],out@df[2])
   out @ D = D
+  rownames(out @ D) = colnames(resp)
   
   return(out)
 }

@@ -1,7 +1,7 @@
 Package: someMTP
 Type: Package
 Title: Some Multiple Testing Procedures
-Version: 1.2
+Version: 1.3
 Date: 2011-04-10
 Author: livio finos
 Maintainer: <livio@stat.unipd.it>
@@ -10,6 +10,6 @@ Description: It's a collection of functions for Multiplicty Correction
         and Multiple Testing.
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2011-04-05 15:31:39 UTC; livio
+Packaged: 2011-05-04 14:29:41 UTC; livio
 Repository: CRAN
-Date/Publication: 2011-04-05 15:44:45
+Date/Publication: 2011-05-04 15:31:58

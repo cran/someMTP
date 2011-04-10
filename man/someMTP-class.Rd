@@ -26,9 +26,10 @@
 	\item{\code{idOrd}:}{The vector of indices used in sorting.}
     \item{\code{MTP}:}{The type of procedure used.}
     \item{\code{GD}:}{A logical value incating if the correction for General Dependence have been used or not.}
-    \item{\code{q}:}{The level of contrelled FDR if MTP=="fdrOrd".}
-    \item{\code{k}:}{The number of false rejection if MTP=="kfweOrd"}
-    \item{\code{alpha}:}{The significance level if MTP=="kfweOrd"}
+    \item{\code{q}:}{The level of contrelled FDR when MTP=="fdrOrd".}
+    \item{\code{k}:}{The number of false rejection when MTP=="kfweOrd"}
+	\item{\code{J}:}{The number of allowed Jumps when MTP=="kfweOrd"}
+    \item{\code{alpha}:}{The significance level when MTP=="kfweOrd"}
     \item{\code{alphaprime}:}{The significance level of individual tests.}
   }
 }

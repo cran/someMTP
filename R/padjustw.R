@@ -1,7 +1,7 @@
+p.adjust.w <- function (p, method = c("bonferroni","holm","BHfwe","BH","BY"), n = length(p),w=rep(1,length(p))){
 
-p.adjust.w <- function (p, method = c("holm","BHfwe","BH","BY"), n = length(p),w=rep(1,length(p))){
-
-w=w/sum(w)*length(w)
+	w=w/sum(w)*n
+	if(!is.null(names(w)) & !is.null(names(p))) w=w[names(p)]
 
     method <- match.arg(method)
     if (method == "fdr") 
@@ -13,17 +13,17 @@ w=w/sum(w)*length(w)
     stopifnot(n >= length(p))
     if (n <= 1) 
         return(p0)
-    p0[nna] <- switch(method, bonferroni = pmin(1, p*w), 
+    p0[nna] <- switch(method, bonferroni = pmin(1, p*w*n), 
 	   holm = { #Holm's (1979) weighted procedure
         o <- order(p/w)
         ro <- order(o)
 		i <- cumsum(w[o])
-        pmin(1, cummax(n - i + w[o] * p[o]))[ro]
+        pmin(1, cummax((n - i + w[o]) * p[o]))[ro]
     },  BHfwe= { #Benjamini-Hochberg's (1997) weighted procedure for familywise error rate control
         o <- order(p)
         ro <- order(o)
-		i <- cumsum(w[o])
-        pmin(1, cummax(n - i + w[o] * p[o]))[ro]
+		i <- cumsum(w[o])	
+        pmin(1, cummax((n - i + w[o]) * p[o]))[ro]
     }, BH = { #Benjamini-Hochberg's (1997) weighted procedure for weighted false discovery rate control
         o <- order(p, decreasing = TRUE)
         ro <- order(o)
