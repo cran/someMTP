@@ -9,7 +9,7 @@ Given a set of p-values, returns p-values adjusted using one of several (weighte
 It extends the method of \code{p.adjust\{stats\}}
 }
 \usage{
-p.adjust.w(p, method = c("bonferroni","holm", "BHfwe", "BH", "BY"), n = length(p), w = rep(1, length(p)))
+p.adjust.w(p, method = c("bonferroni","holm","BHfwe","BH","BY"), n = length(p),w=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

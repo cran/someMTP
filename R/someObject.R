@@ -12,6 +12,7 @@ setClassUnion("callOrNULL", c("call", "NULL"))
 
 setClass("someMTP.object", 
   representation(
+	call = "callOrNULL",
     rej = "vectorOrNULL", 
 	p = "vectorOrNULL",
 	ord = "vectorOrNULL", 
@@ -25,6 +26,7 @@ setClass("someMTP.object",
 	alphaprime = "numericOrNULL"
   ),
   prototype = list(
+	call = NULL,
     rej = NULL,
 	p = NULL,
 	ord = NULL,
@@ -163,8 +165,10 @@ draw <- function(object, what = c("all","ordVsP", "stepVsR"), pdfName = NULL) {
   par(cex=1.5)
 	plot(object@ord,-log10(object@p),xlab="Ordering values", ylab="-log10(p-values)",pch=20,axes=TRUE,main="Ordering Criterion vs -log10(p-values)",col=object@rej+1)
 	abline(-log10(ifelse(object@MTP=="fdrOrd", object@q,object@alpha)),0,col="gray",lwd=2)
-	vline= length(object@rej)-which.max(which(cumsum(object@rej[object@idOrd[length(object@idOrd):1]])==0))+1
-	abline(v=ifelse(length(vline)>0,object@ord[object@idOrd[vline]],0) ,col="gray",lwd=2)
+	vline= switch(object@MTP,
+	       fdrOrd=(length(object@rej)-which.max(which(cumsum(object@rej[object@idOrd[length(object@idOrd):1]])==0))+1)[1], 
+		   kfweOrd = which(cumsum((1-object@rej)[object@idOrd])==(object@J+1))[1] ,NULL) 
+	abline(v=ifelse(!is.na(vline),object@ord[object@idOrd[vline]],0) ,col="gray",lwd=2)
 	# axis(1)
 	# axis(2)
   }

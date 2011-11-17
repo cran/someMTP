@@ -5,7 +5,7 @@
 Multipicity correction for Stepwise Selected models
 }
 \description{
-Corrects the false discoveries due to model selection. It works with models of class \code{glm} and selected with function \code{step \{stats\)}.
+Corrects the p-value due to model selection. It works with models of class \code{glm} and selected with function \code{step \{stats\)}.
 }
 \usage{
 step.adj(object, MC = 1000, scope = NULL, scale = 0, direction = c("both", "backward", "forward"), trace = 0, keep = NULL, steps = 1000, k = 2) 

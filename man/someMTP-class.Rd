@@ -31,6 +31,7 @@
 	\item{\code{J}:}{The number of allowed Jumps when MTP=="kfweOrd"}
     \item{\code{alpha}:}{The significance level when MTP=="kfweOrd"}
     \item{\code{alphaprime}:}{The significance level of individual tests.}
+    \item{\code{call}:}{The cal that generates the object.}
   }
 }
 

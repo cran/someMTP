@@ -1,6 +1,6 @@
-p.adjust.w <- function (p, method = c("bonferroni","holm","BHfwe","BH","BY"), n = length(p),w=rep(1,length(p))){
-
-	w=w/sum(w)*n
+p.adjust.w <- function (p, method = c("bonferroni","holm","BHfwe","BH","BY"), n = length(p),w=NULL){
+	
+	if(is.null(w)) w=rep(1,length(p)) else w=w/sum(w)*n
 	if(!is.null(names(w)) & !is.null(names(p))) w=w[names(p)]
 
     method <- match.arg(method)
