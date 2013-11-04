@@ -26,9 +26,6 @@ correction method
   weigths to be used. \code{p.adjust.w(..., rep(1,length(p)))} produces the same results as in \code{p.adjust(...)} (i.e. the unweighted counterpart).
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 A vector of corrected p-values (same length as p) having two attributes: \code{attributes(...)$w} is the vecotr of used weights and \code{attributes(...)$method} is the method used.
 }
@@ -41,13 +38,8 @@ Finos,  Salmaso (2007). FDR- and FWE-controlling methods using data-driven weigh
 \author{
 Livio Finos
 }
-\note{
-%%  ~~further notes~~
-}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
-
-
 \seealso{
  \code{\link{p.adjust}}
 }

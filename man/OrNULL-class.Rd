@@ -17,16 +17,6 @@ class * or Null
 \section{Methods}{
 No methods defined with class "*OrNULL" in the signature.
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%%  ~~objects to See Also as \code{\link{~~fun~~}}, ~~~
-%%  ~~or \code{\linkS4class{CLASSNAME}} for links to other classes ~~~
-}
 \examples{
 showClass("callOrNULL")
 }

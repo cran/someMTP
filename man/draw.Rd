@@ -21,24 +21,12 @@ draw(object, what = c("all", "ordVsP", "stepVsR"), pdfName = NULL)
   \item{pdfName}{ it is the pdf filename where the plot will be saved. If \code{pdfNane} is null (the default) the plot will show as window.
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 No value is returned
-}
-\references{
-%% ~put references to the literature/web site here ~
 }
 \author{
 Livio Finos
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
 See Also \code{\link{fdrOrd}}.
 }

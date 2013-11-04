@@ -56,8 +56,7 @@
   Z <- .getNull(Z, data, n)
   offset <- Z$offset   
   Z <- Z$Z
-  Z=Z[,apply(Z,2,function(x) !all(x==0)),drop=FALSE]
-	
+  Z <- Z[,apply(Z,2,function(x) !all(x==0)),drop=FALSE]
   #if(unique(Z[,"(Intercept)"])==0) 
   X <- .getAlternative(X, data, n)
   X <- X[, setdiff(colnames(X),colnames(Z)),drop=FALSE]

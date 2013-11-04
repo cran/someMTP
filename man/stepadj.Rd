@@ -8,7 +8,9 @@ Multipicity correction for Stepwise Selected models
 Corrects the p-value due to model selection. It works with models of class \code{glm} and selected with function \code{step \{stats\)}.
 }
 \usage{
-step.adj(object, MC = 1000, scope = NULL, scale = 0, direction = c("both", "backward", "forward"), trace = 0, keep = NULL, steps = 1000, k = 2) 
+step.adj(object, MC = 1000, scope = NULL, scale = 0, 
+         direction = c("both", "backward", "forward"), 
+         trace = 0, keep = NULL, steps = 1000, k = 2) 
 }
 
 %- maybe also 'usage' for other objects documented here.
@@ -46,12 +48,8 @@ L. Finos, C. Brombin, L. Salmaso (2010). Adjusting stepwise p-values in generali
 \author{
 Livio Finos and Chiara Brombin
 }
-\note{
-%%  ~~further notes~~
-}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
  \code{\link{glm}}, \code{\link{anova}}
 }
@@ -73,4 +71,3 @@ anova(glm(y~1, data=DATA),mod.step,test="F")
 step.adj(mod,MC=101, trace=0)
 }
 \keyword{htest}
-

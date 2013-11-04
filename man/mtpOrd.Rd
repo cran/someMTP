@@ -1,14 +1,15 @@
-\name{fdrOrd}
+\name{fdrOrd/kfweOrd}
 \alias{fdrOrd}
 \alias{kfweOrd}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ Controlling the False Discovery Rate in ordered Test}
+\title{ Controlling the False Discovery Rate and and the Generalized FWER in ordered Test}
 \description{
 Ordinal procedure controlling the FDR and the Generalized FWER
 }
 \usage{
 fdrOrd(p, q = .01, ord = NULL, GD=FALSE)
-kfweOrd(p, k = 1, alpha = 0.01, ord = NULL, alpha.prime = alpha, J = qnbinom(alpha, k, alpha.prime), GD = FALSE)
+kfweOrd(p, k = 1, alpha = 0.01, ord = NULL, alpha.prime = alpha,
+        J = qnbinom(alpha, k, alpha.prime), GD = FALSE)
 
 }
 %- maybe also 'usage' for other objects documented here.
@@ -54,16 +55,14 @@ kfweOrd(p, k = 1, alpha = 0.01, ord = NULL, alpha.prime = alpha, J = qnbinom(alp
 }
 
 \references{
-L. Finos, A. Farcomeni (2010). k-FWER Control without p-value Adjustment, with Application to Detection of Genetic Determinants of Multiple Sclerosis in Italian Twins. Biometrics.
+L. Finos, A. Farcomeni (2011). k-FWER Control without p-value Adjustment, with Application to Detection of Genetic Determinants of Multiple Sclerosis in Italian Twins. Biometrics.
+
+A. Farcomeni, L. Finos (2013). FDR Control with Pseudo-Gatekeeping Based on a Possibly Data Driven Order of the Hypotheses. Biometrics.
 
 }
 \author{ L. Finos and A. Farcomeni
 %%  ~~who you are~~
 }
-\note{
-%%  ~~further notes~~
-}
-
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
@@ -84,12 +83,10 @@ See also \code{\link{draw}}
 	draw(pOrd)	
 	sum(p.adjust(ps,method="BH")<=.05)  #rejections with BH
 	
-	kOrd <- kfweOrd(ps,k=5,ord=m2)                          #ordinal procedure
+	kOrd <- kfweOrd(ps,k=5,ord=m2)#ordinal procedure
 	kOrd
-	kOrdGD <- kfweOrd(ps,k=5,ord=m2,GD=TRUE)                  #ordinal procedure (any dependence)
+	kOrdGD <- kfweOrd(ps,k=5,ord=m2,GD=TRUE)#ord. proc. (any dependence)
 	kOrdGD
-
-
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

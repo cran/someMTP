@@ -1,4 +1,4 @@
-e78c224a46d52a4d4de79a096eff2cd3 *DESCRIPTION
+59d9a85acafc555272ad31587433346d *DESCRIPTION
 c2dd491a1deb5bb4c21c3bf40883d338 *NAMESPACE
 f09e57c817a463c90a9f2e91bfa596b2 *R/LSDtest.R
 8257f6d5fa1d7e79d6e23a2fedd4f9dc *R/fdrOrd.r
@@ -6,13 +6,13 @@ f09e57c817a463c90a9f2e91bfa596b2 *R/LSDtest.R
 3e05c3a0813790a88f424139d6844e5e *R/padjustw.R
 b291112e6f65ad7fa18f255b846fe794 *R/someObject.R
 7635779b393d10b15b37988fc7699a9c *R/stepadj.r
-c7a9cbaac95d776b2a46727553b50503 *R/utils.R
-0bf2229c4c10dcb7308db3bbd8092daa *man/OrNULL-class.Rd
-9a80498a542ec53c5013d890e3a2b5ac *man/draw.Rd
+792579cbdf7c7c9b658141598464d4e8 *R/utils.R
+ffd674d5b080fc4be7763f0d67baf197 *man/OrNULL-class.Rd
+3d81e71921671f78d09b662339eb0132 *man/draw.Rd
 515c89a58c813f2643b133d40a217ba5 *man/lsd-class.Rd
-2bf06aeb2510c276cb75bc1c2b5e6606 *man/lsdtest.Rd
-a7d7b341f793a38c44b51101d9d985e1 *man/mtpOrd.Rd
-6cc12627f77e898fc682009df3695eb8 *man/padjustw.Rd
+490d6ba4c79528bd21980882beaef7fc *man/lsdtest.Rd
+ed1c8a93fe465b86714f09e891d72df7 *man/mtpOrd.Rd
+5395998458c2a64a35b9ce7531e2e364 *man/padjustw.Rd
 2a72266a56109430125466d04f6aa03d *man/someMTP-class.Rd
 4ed20bf08d540cb31c9e25582139051f *man/someMTP-package.Rd
-7b64ee5fce5cbadcae8cafc57ea6efc6 *man/stepadj.Rd
+dc6d38677aeca9936b2597050c714359 *man/stepadj.Rd

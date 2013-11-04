@@ -36,9 +36,6 @@ lsd.test(resp, alternative = 1, null = NULL, D = NULL, data=NULL)
   When \code{D = NULL}, then  \code{D =  diag(t(resp)\%*\%IP0\%*\%resp)} with \code{IP0 = diag(n) - null\%*\%solve(t(null)\%*\%null)\%*\%t(null)}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 
 \value{The function returns an object of class \code{lsd.object}.
   \item{F }{the test statistic}
@@ -60,15 +57,7 @@ covariates, Statistics and Probabilty Letters, Volume 81, Issue 6, June 2011, Pa
 \author{
 Livio Finos
 }
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 set.seed(1)
 #Standard multivariate LSD test for one sample case
