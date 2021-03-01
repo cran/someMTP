@@ -17,7 +17,7 @@ kfweOrd<-function(p,k=1,alpha=.01,ord=NULL,alpha.prime=alpha,J=qnbinom(alpha,k,a
   	h[1:max(which(u<=J))] <- 1
   	h[ps>alpha1] <- 0
 
-        if(sum(h)<k)  h[(h==0)&&(ps<=alpha1)][1:min(sum((h==0)&&(ps<=alpha1)),k-1-sum(h))]=1
+        if(sum(h)<k)  h[(h==0)&(ps<=alpha1)][1:min(sum((h==0)&(ps<=alpha1)),k-1-sum(h))]=1
   	h[o] <- h
   }
   else{h <- rep(0,length(p))}

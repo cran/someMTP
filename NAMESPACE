@@ -5,3 +5,10 @@ exportClasses(someMTP.object, lsd.object)
 exportMethods(show, length, names, "names<-", sort)
 
 export(lsd.test,fdrOrd, p.adjust.w, draw)
+
+importFrom("grDevices", "dev.off", "pdf")
+importFrom("graphics", "abline", "legend", "par")
+importFrom("methods", "is", "new", "show")
+importFrom("stats", "anova", "coef", "formula", "glm", "lm",
+           "model.frame", "model.matrix", "model.offset", "pf",
+           "qnbinom", "step", "terms", "update")
